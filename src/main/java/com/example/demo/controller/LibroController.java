@@ -9,12 +9,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("/libro")
 public class LibroController {
 
     @Autowired
     private LibroService libroService;
 
-    @PostMapping("/libro")
+    @PostMapping
     public Libro guardarLibro(@RequestBody LibroSaveDto libroSaveDto) {
         return this.libroService.guardarLibro(libroSaveDto);
     }

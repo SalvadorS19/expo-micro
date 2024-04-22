@@ -1,14 +1,14 @@
 package com.example.demo.model;
 
 import jakarta.persistence.*;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
-@Table(name = "Libros")
+@Table(name = "libro")
 @Builder
 @Getter @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Libro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
